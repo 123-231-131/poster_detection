@@ -4,6 +4,7 @@ let noseX,noseY;
 let reyeX,reyeY;
 let leyeX,leyeY;
 let singlePose,skeleton;
+let person_imgimg;
 
 function setup() {
     createCanvas(9000, 9000);
@@ -12,6 +13,8 @@ function setup() {
 
     posenet = ml5.poseNet(capture, modelLoaded);
     posenet.on('pose',receivedPoses);
+
+    person_img =  loadImage('images/test.jpg');
 
     
 }
@@ -45,7 +48,7 @@ function draw() {
             line(skeleton[j][0].position.x, skeleton[j][0].position.y, skeleton[j][1].position.x, skeleton[j][1].position.y)
         }
 
-        //image(specs,singlePose.nose.x-35,singlePose.nose.y-50,80,80);
+         image(person_img,singlePose.nose.x-35,singlePose.nose.y-50,80,80);
         //image(smoke,singlePose.nose.x-35,singlePose.nose.y+10,40,40);
 
         
