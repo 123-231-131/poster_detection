@@ -4,7 +4,7 @@ let noseX,noseY;
 let reyeX,reyeY;
 let leyeX,leyeY;
 let singlePose,skeleton;
-let person_imgimg;
+let person_img;
 
 function setup() {
     createCanvas(9000, 9000);
